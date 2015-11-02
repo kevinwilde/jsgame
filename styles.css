@@ -1,7 +1,40 @@
 html, body {
-    background-color: yellow;
+	margin: 0;
+    background: url(images/bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-#test {
-    font-weight: bold;
+.dv-score {
+	margin: 1em;
+}
+
+.dv-play-game {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 2em;
+    /*border-radius: 10%;*/
+    /*border: 2px solid black;*/
+}
+
+.btn-play-game {
+    background-color: #888;
+    padding: 0.5em;
+    margin: 1em;
+    cursor: pointer;
+}
+
+.rock {
+	position: absolute;
+	height: 120px;
+	width: 110px;
+    background-image: url('images/rock.png');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    cursor: pointer;
 }

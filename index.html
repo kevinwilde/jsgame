@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Game</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+	<title>Protect the Flowers</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-	<p id="test">Test</p>
-    Hi
-    <script src="script.js"></script>
+	<div class="dv-score">
+        Lives: <span id="lives-left">3</span>
+        Score: <span id="score">0</span>
+    </div>
+
+    <div class="dv-play-game">
+        Protect the flowers by destroying the falling missiles before they reach the ground.
+        <br />
+        <a class="btn-play-game">Play</a>
+    </div>
+
+	<script src="script.js"></script>
 </body>	
 </html>
