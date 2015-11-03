@@ -21,7 +21,7 @@ function createRock() {
     }
     interval = setInterval(createRock, speed);
     $(rock).animate({ bottom: 0 }, 5000, "linear", loseLife);
-    $(rock).click(function () {
+    $(rock).on(isMobile ? 'touchend' : 'click', function () {
         if (!($(rock).hasClass('bottom'))) {
             $(rock).stop();
             $(rock).remove();
@@ -47,7 +47,7 @@ function gameOver() {
     $('#dv-replay').fadeIn(300);
 }
 
-$('#btn-replay').click(function () {
+$('#btn-replay').on(isMobile ? 'touchend' : 'click', function () {
     $('.rock').remove();
     score = 0;
     livesLeft = 3;
