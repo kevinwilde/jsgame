@@ -5,6 +5,12 @@ html, body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.hidden {
+    display: none;
 }
 
 .dv-score {
@@ -14,15 +20,15 @@ html, body {
 .dv-play-game {
     margin-left: auto;
     margin-right: auto;
+    width: 50%;
     text-align: center;
     padding: 2em;
-    /*border-radius: 10%;*/
-    /*border: 2px solid black;*/
 }
 
 .btn-play-game {
-    background-color: #888;
-    padding: 0.5em;
+    background-color: #90EE90;
+    border-radius: 0.5em;
+    padding: 1em;
     margin: 1em;
     cursor: pointer;
 }

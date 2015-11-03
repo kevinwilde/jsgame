@@ -3,19 +3,26 @@
 <head>
 	<title>Protect the Flowers</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 	<div class="dv-score">
-        Lives: <span id="lives-left">3</span>
-        Score: <span id="score">0</span>
+        Score: <span class="score">0</span>
+        <br />
+        Lives: <span class="lives-left">3</span>
     </div>
 
-    <div class="dv-play-game">
-        Protect the flowers by destroying the falling missiles before they reach the ground.
+    <div id="dv-start" class="dv-play-game">
+        <h1>Protect the flowers by destroying the falling rocks before they reach the ground.</h1>
         <br />
-        <a class="btn-play-game">Play</a>
+        <a id="btn-start" class="btn-play-game">Play</a>
+    </div>
+
+    <div id="dv-replay" class="dv-play-game hidden">
+        <h1>Game over!</h1>
+        <h2>Score: <span class="score">0</span></h2>
+        <br />
+        <a id="btn-replay" class="btn-play-game">Play Again</a>
     </div>
 
 	<script src="script.js"></script>

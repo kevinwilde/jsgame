@@ -2,8 +2,8 @@ var livesLeft = 3;
 var score = 0
 var speed = 5000;
 
-$('.btn-play-game').click(function () {
-    $('.dv-play-game').fadeOut(300, "linear", createRock);
+$('#btn-start').click(function () {
+    $('#dv-start').fadeOut(300, "linear", createRock);
 });
 
 function createRock() {
@@ -15,17 +15,20 @@ function createRock() {
     document.body.appendChild(rock);
     $(rock).animate({ bottom: 0 }, speed, "linear", loseLife);
     $(rock).click(function () {
-        $(rock).stop();
-        $(rock).remove();
-        score += 1;
-        $('#score').text(score);
-        createRock();
+        if (!($(rock).hasClass('bottom'))) {
+            $(rock).stop();
+            $(rock).remove();
+            score += 1;
+            $('.score').text(score);
+            createRock();
+        }
     });
 }
 
 function loseLife() {
+    $(this).addClass('bottom');
     livesLeft -= 1;
-    $('#lives-left').text(livesLeft);
+    $('.lives-left').text(livesLeft);
     if (livesLeft <= 0) {
         gameOver();
     }
@@ -35,10 +38,18 @@ function loseLife() {
 }
 
 function gameOver() {
-    $('.rock').remove();
-    var btnReplay = document.createElement("a");
-    $(btnReplay).addClass('btn-play-game');
-    $(btnReplay).text("Play Again");
-    document.body.appendChild(btnReplay);
-    //$(btnReplay).click(createRock);
+    $('.rock').stop();
+    //$('.dv-score').fadeOut(300);
+    $('#dv-replay').fadeIn(300);
 }
+
+$('#btn-replay').click(function () {
+    $('.rock').remove();
+    score = 0;
+    livesLeft = 3;
+    speed = 5000;
+    $('.score').text(score);
+    $('.lives-left').text(livesLeft);
+    $('#dv-replay').fadeOut(300, "linear", createRock);
+    //$('.dv-score').fadeIn(300);
+});
